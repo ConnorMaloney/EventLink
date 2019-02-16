@@ -101,10 +101,11 @@ body {
 
 .unstakeable-city {
   border-radius: 5rem;
-  height: 5rem;
-  width: 5rem;
-  background-color: blue;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #0892D0;
   position: relative;
-  bottom: 2rem;
+  bottom: 2.25rem;
   right: 1rem;
+  opacity: 0.7;
 }

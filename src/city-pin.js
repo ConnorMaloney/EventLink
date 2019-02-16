@@ -74,7 +74,8 @@ class GetTweetNumber extends React.Component {
     /*if (this.state.allTweets > 5) {
       return <div className="stake-city"><h1 id="stake-city-count"> 100+ </h1></div>
     }*/
- 
+
+    //return <h1>{this.state.allTweets} {/*this.state.stakeableCity*/} </h1>    
   }
 
 }
