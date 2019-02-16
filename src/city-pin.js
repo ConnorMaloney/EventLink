@@ -1,3 +1,9 @@
+// TODO: 
+// 1) Add list of top leading cities based on number of tweets, display outside map
+// 2) Add number of tweets in the popup
+// 3) PUT number into bubble of cursor
+// 4) Most recent tweet in the popup
+// 5) RENDER circles dynamically by changing css in component based on tweets
 import React, {PureComponent} from 'react';
 
 //const API = 'https://api.myjson.com/bins/17vo6i'
@@ -45,15 +51,19 @@ export default class CityPin extends PureComponent {
 
     return (
       <>
-      <svg 
+      <div class="pop-up" onClick={onClick}>
+      {<h2 id="tweet-count-svg"> <GetTweetNumber city={this.props.name}/> </h2>
+      /*<svg 
         height={size}
-        viewBox="0 0 24 24"
+        viewBox="0 0 12 24"
         style={{...pinStyle, transform: `translate(${-size / 2}px,${-size}px)`}}
         onClick={onClick}
       >
         <path d={ICON}/>
       </svg>
-      <GetTweetNumber city={this.props.name}/>
+      */}
+      </div>
+      {/*<GetTweetNumber city={this.props.name}/>*/}
       </>
     );
   }

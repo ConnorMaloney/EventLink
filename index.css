@@ -60,3 +60,17 @@ body {
   background-color: #989898	;
   position: static;
 }
+
+.pop-up {
+  border-radius: 5rem;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #0892D0;
+}
+
+#tweet-count-svg {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.75rem;
+}
