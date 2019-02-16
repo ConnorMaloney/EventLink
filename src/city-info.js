@@ -13,7 +13,7 @@ class LatestCityTweet extends React.Component {
     .then(
       (responseData) => {
         this.setState({
-          lastTweet: responseData.result[this.props.city.toLowerCase()].length
+          lastTweet: responseData.result[this.props.city.toLowerCase()][responseData.result[this.props.city.toLowerCase()].length-1].text
         })}); 
 
   }
@@ -38,7 +38,7 @@ export default class CityInfo extends PureComponent {
           </a>
         </div>
         <img width={240} src={info.image} />
-        <h2> Tweets <LatestCityTweet city={this.props.name}/> </h2>
+        <p><LatestCityTweet city={info.city}/></p>
       </div>
     );
   }
