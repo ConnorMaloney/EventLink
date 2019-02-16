@@ -51,17 +51,8 @@ export default class CityPin extends PureComponent {
 
     return (
       <>
-      <div class="pop-up" onClick={onClick}>
-      {<h2 id="tweet-count-svg"> <GetTweetNumber city={this.props.name}/> </h2>
-      /*<svg 
-        height={size}
-        viewBox="0 0 12 24"
-        style={{...pinStyle, transform: `translate(${-size / 2}px,${-size}px)`}}
-        onClick={onClick}
-      >
-        <path d={ICON}/>
-      </svg>
-      */}
+      <div class="city-marker" onClick={onClick}>
+        <h2 id="tweet-count-svg"> <GetTweetNumber city={this.props.name}/></h2>
       </div>
       </>
     );

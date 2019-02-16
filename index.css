@@ -61,16 +61,20 @@ body {
   position: static;
 }
 
-.pop-up {
+.city-marker {
   border-radius: 5rem;
   height: 2.25rem;
   width: 2.25rem;
   background-color: #0892D0;
+  position: relative;
+  bottom: 2.25rem;
+  right: 1rem;
+  opacity: 0.5;
 }
 
 #tweet-count-svg {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: whitesmoke;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
