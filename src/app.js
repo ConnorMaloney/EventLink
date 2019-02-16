@@ -30,7 +30,9 @@ class NavBar extends React.Component {
           <div className="nav-bar-options">
             <a href="#phase-two">PHASE 2</a>
           </div>
-          <div className="nav-bar-options">PHASE 3</div>
+          <div className="nav-bar-options">
+            <a href="#phase-three">PHASE 3</a>
+          </div>
         </div>
       </div>
     );
@@ -40,16 +42,36 @@ class NavBar extends React.Component {
 class PhaseTwo extends React.Component {
   render() {
     return (
-      <div className="phase-two-body" id="phase-two">
-        <h2>Time to Stake</h2>
-        <p>
-          Staking ensures that the next ETHGlobal event is held that the city of
-          your choosing. Staking also acts as your payment for a ticket. If your
-          city of choice does not win majority vote, your funds will be released
-          back to you at the end of the staking period.
-        </p>
-        <div className="winner-one" />
-        <div className="winner-two" />
+      <div className="phase-two-body" id="phase-two-body">
+        <div className="phase-two-intro">
+          <div className="phase-two-title">Phase Two: Stake for your city</div>
+          <div className="phase-two-explain">
+            Please stake to the city you want the next ETH Global Event to be
+            hosted in.
+          </div>
+        </div>
+        <div className="stake-body">
+          <div className="staking-cities">
+            <div className="top-cities" id="city-one">
+              City One
+              <div className="city-stake">Please send here</div>
+            </div>
+            <div className="winning-city" id="city-two">
+              City Two
+              <div className="city-stake">Please send here</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class PhaseThree extends React.Component {
+  render() {
+    return (
+      <div className="phase-three-body" id="phase-three">
+        Test
       </div>
     );
   }
@@ -104,6 +126,7 @@ export default class Map extends Component {
           onClose={() => this.setState({ popupInfo: null })}
         >
           <CityInfo info={popupInfo} />
+          <h1> Test </h1>
         </Popup>
       )
     );
@@ -120,7 +143,8 @@ export default class Map extends Component {
         mapStyle="mapbox://styles/mapbox/dark-v9"
         onViewportChange={this._updateViewport}
         mapboxApiAccessToken={TOKEN}
-        scrollZoom={false}>
+        scrollZoom={false}
+      >
         {CITIES.map(this._renderCityMarker)}
 
         {this._renderPopup()}
@@ -139,11 +163,12 @@ function App() {
       <NavBar />
       <div className="phase-one">
         <div className="count-down">
-          <Countdown date={Date.now() + 2.592e+9} />
+          <Countdown date={Date.now() + 2.592e9} />
         </div>
         <Map />
       </div>
       <PhaseTwo />
+      <PhaseThree />
     </div>
   );
 }
@@ -151,3 +176,9 @@ function App() {
 export function renderToDom(container) {
   render(<App />, container);
 }
+
+//form for staking
+//phase 3
+// alarm clock countdown
+//display leaders and give eth address
+//make timer not reset

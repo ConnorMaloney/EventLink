@@ -47,7 +47,7 @@ body {
   position: static;
   height: 90vh;
   width: 100%; 
-  overflow: auto;
+  margin-bottom: 1rem;
 }
 
 .count-down {
@@ -56,11 +56,29 @@ body {
 }
 
 .phase-two-body {
-  height: 100vh;
-  background-color: #989898	;
-  position: static;
+  justify-content: center; 
+  height: 100vh; 
+  width: 100%; 
+  background-color: #D3D3D3; 
 }
 
+.phase-two-intro {
+  display: flex; 
+  justify-content: center;
+  width: 100%; 
+  height: 10vh; 
+  padding: 5rem; 
+}
+
+.stake-body {
+  display: flex;
+}
+
+.phase-three-body {
+  height: 100vh; 
+  width: 100%; 
+  background-color: #C8C8C8;
+}
 .city-marker {
   border-radius: 5rem;
   height: 2.25rem;
