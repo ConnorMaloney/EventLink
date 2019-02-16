@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: #000;
+}
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.control-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 320px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  padding: 12px 24px;
+  margin: 20px;
+  font-size: 13px;
+  line-height: 2;
+  color: #6b6b76;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.nav-container {
+  display: flex; 
+  height: 10vh;
+  width: 100%;
+  background-color: grey; 
+  color: white; 
+  justify-content: center;
+  align-content: center;
+
+}
+
+.nav-grid-phase {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+
+}
+
+.nav-bar-options {
+  margin: 2rem; 
+
+}
+
+.phase-one {
+  position: static;
+  height: 90vh;
+  width: 100%;
+
+}
+
+.phase-two {
+  height:100vh; 
+  background-color: white;
+  position: static;
+}
