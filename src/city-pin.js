@@ -63,7 +63,6 @@ export default class CityPin extends PureComponent {
       </svg>
       */}
       </div>
-      {/*<GetTweetNumber city={this.props.name}/>*/}
       </>
     );
   }
