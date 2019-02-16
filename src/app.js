@@ -11,7 +11,7 @@ import CITIES from "../data/cities.json";
 
 import Countdown from "react-countdown-now";
 
-const API = 'https://api.myjson.com/bins/6fpy2'
+const API = "https://api.myjson.com/bins/6fpy2";
 
 const TOKEN =
   "pk.eyJ1IjoiZm9vcGVydCIsImEiOiJjanM1bDlxbmgwMDUwNGFtZHFxZ3M2NGx1In0.N6t4n3TBDjXSGXeZ2QyosQ"; // Set your mapbox token here
@@ -24,25 +24,22 @@ const navStyle = {
 };
 
 class TopCities extends React.Component {
-  state = { ethAddr: null}
+  state = { ethAddr: null };
 
   componentDidMount() {
     fetch(API)
-    .then(function(response){
-      return response.json()
-    })
-    .then(
-      (responseData) => {
+      .then(function(response) {
+        return response.json();
+      })
+      .then(responseData => {
         this.setState({
           ethAddr: responseData.result[this.props.city.toLowerCase()].length
-
-        })}); 
-
+        });
+      });
   }
   render() {
-    return <h1>{this.state.ethAddr}</h1>    
+    return <h1>{this.state.ethAddr}</h1>;
   }
-
 }
 
 class NavBar extends React.Component {
@@ -72,10 +69,10 @@ class PhaseTwo extends React.Component {
             Phase Two: Stake Your City Of Choice
           </div>
           <div className="phase-two-blurp">
-            These two cities have made it to the second round! Congratulations! Are you
-            truly committed to having us in your city? Let us know by putting in
-            your staking amount. The higher the amount, the greater the chance
-            your city will be selected!
+            These two cities have made it to the second round! Congratulations!
+            Are you truly committed to having us in your city? Let us know by
+            putting in your staking amount. The higher the amount, the greater
+            the chance your city will be selected!
           </div>
         </div>
         <div className="phase-two-stake">
@@ -87,9 +84,31 @@ class PhaseTwo extends React.Component {
   }
 }
 
+class ClaimStake extends React.Component {
+  render() {
+    return (
+      <div className="claim-stake">
+        <div className="stake-form">
+          <form>
+            <label for="eth-address">Your Ethereum Address</label>
+            <input type="text" id="eth-address" name="Eth Address" />
+            <label for="keybase-user">Your Keybase Username</label>
+            <input type="text" id="keybase-user" name="keybase-usre" />
+          </form>
+        </div>
+      </div>
+    );
+  }
+}
+
 class PhaseThree extends React.Component {
   render() {
-    return <div className="phase-three-form" id="phase-three" />;
+    return (
+      <div className="phase-three-body" id="phase-three">
+        Phase 3: Verify Owner of the Event
+        <ClaimStake />
+      </div>
+    );
   }
 }
 
