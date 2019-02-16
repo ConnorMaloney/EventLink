@@ -96,3 +96,34 @@ body {
   text-align: center;
   font-size: 0.9rem;
 }
+
+.stake-city {
+  border-radius: 5rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: red;
+  position: relative;
+  bottom: 2rem;
+  right: 1rem;
+}
+
+.stakeable-city {
+  border-radius: 5rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: red;
+  position: relative;
+  bottom: 2rem;
+  right: 1rem;
+}
+
+.unstakeable-city {
+  border-radius: 5rem;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #0892D0;
+  position: relative;
+  bottom: 2.25rem;
+  right: 1rem;
+  opacity: 0.7;
+}

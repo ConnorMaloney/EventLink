@@ -17,6 +17,10 @@ const pinStyle = {
 };
 
 
+function isBig(tweetCount) {
+  return tweetCount > 5
+}
+
 class GetTweetNumber extends React.Component {
   state = { allTweets: null, stakeableCity: "nostake"}
 
@@ -39,7 +43,7 @@ class GetTweetNumber extends React.Component {
     /*  
     .then(
       (tweetCount) => {
-        if (tweetCount < 100) {
+        if (tweetCount > 100) {
           this.setState({
             stakeableCity: "stake"
           })
@@ -66,12 +70,12 @@ class GetTweetNumber extends React.Component {
   }
   */
   render() {
-    if (this.state.allTweets < 100) {
-      
-      //return <h1> STAKEABLE </h1>
-    }
+    return <div className={isBig(this.state.allTweets) ? 'stakeable-city' : 'unstakeable-city'}><h1>{this.state.allTweets}</h1></div>
+    /*if (this.state.allTweets > 5) {
+      return <div className="stake-city"><h1 id="stake-city-count"> 100+ </h1></div>
+    }*/
 
-    return <h1>{this.state.allTweets} {this.state.stakeableCity} </h1>    
+    //return <h1>{this.state.allTweets} {/*this.state.stakeableCity*/} </h1>    
   }
 
 }
