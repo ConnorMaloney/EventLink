@@ -126,7 +126,6 @@ export default class Map extends Component {
           onClose={() => this.setState({ popupInfo: null })}
         >
           <CityInfo info={popupInfo} />
-          <h1> Test </h1>
         </Popup>
       )
     );

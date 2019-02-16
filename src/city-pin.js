@@ -87,7 +87,7 @@ export default class CityPin extends PureComponent {
 
     return (
       <>
-      <div class="city-marker" onClick={onClick}>
+      <div onClick={onClick}>
         <h2 id="tweet-count-svg"> <GetTweetNumber city={this.props.name}/></h2>
       </div>
       </>
