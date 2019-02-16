@@ -11,6 +11,8 @@ import CITIES from "../data/cities.json";
 
 import Countdown from "react-countdown-now";
 
+const API = 'https://api.myjson.com/bins/6fpy2'
+
 const TOKEN =
   "pk.eyJ1IjoiZm9vcGVydCIsImEiOiJjanM1bDlxbmgwMDUwNGFtZHFxZ3M2NGx1In0.N6t4n3TBDjXSGXeZ2QyosQ"; // Set your mapbox token here
 
@@ -20,6 +22,28 @@ const navStyle = {
   left: 0,
   padding: "10px"
 };
+
+class TopCities extends React.Component {
+  state = { ethAddr: null}
+
+  componentDidMount() {
+    fetch(API)
+    .then(function(response){
+      return response.json()
+    })
+    .then(
+      (responseData) => {
+        this.setState({
+          ethAddr: responseData.result[this.props.city.toLowerCase()].length
+
+        })}); 
+
+  }
+  render() {
+    return <h1>{this.state.ethAddr}</h1>    
+  }
+
+}
 
 class NavBar extends React.Component {
   render() {
