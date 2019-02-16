@@ -1,8 +1,5 @@
 // TODO: 
 // 1) Add list of top leading cities based on number of tweets, display outside map
-// 2) Add number of tweets in the popup
-// 3) PUT number into bubble of cursor
-// 4) Most recent tweet in the popup
 // 5) RENDER circles dynamically by changing css in component based on tweets
 import React, {PureComponent} from 'react';
 
@@ -21,7 +18,8 @@ const pinStyle = {
 
 
 class GetTweetNumber extends React.Component {
-  state = { allTweets: null}
+  state = { allTweets: null, stakeableCity: "nostake"}
+
 
   componentDidMount() {
     fetch(API)
@@ -35,11 +33,45 @@ class GetTweetNumber extends React.Component {
         
         this.setState({
           allTweets: responseData.result[this.props.city.toLowerCase()].length
-        })}); 
+        })
+        return allTweets
+      })
+    /*  
+    .then(
+      (tweetCount) => {
+        if (tweetCount < 100) {
+          this.setState({
+            stakeableCity: "stake"
+          })
+        }
+      }
+    )*/; 
 
   }
+
+  onChange(prevProps, prevState) {
+    if (prevState.allTweets <= 100) {
+      this.setState({ stakeableCity: "stakeable"})
+    }
+    
+  }
+
+  /*
+  isStakeable() {
+    if (this.allTweets < 100) {
+      this.setState({
+        stakeableCity: "100+"
+      })
+    }
+  }
+  */
   render() {
-    return <h1>{this.state.allTweets}</h1>    
+    if (this.state.allTweets < 100) {
+      
+      //return <h1> STAKEABLE </h1>
+    }
+
+    return <h1>{this.state.allTweets} {this.state.stakeableCity} </h1>    
   }
 
 }
