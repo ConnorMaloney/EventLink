@@ -121,7 +121,7 @@ export default class Map extends Component {
         mapStyle="mapbox://styles/mapbox/dark-v9"
         onViewportChange={this._updateViewport}
         mapboxApiAccessToken={TOKEN}
-      >
+        scrollZoom={false}>
         {CITIES.map(this._renderCityMarker)}
 
         {this._renderPopup()}
