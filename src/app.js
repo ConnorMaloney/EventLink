@@ -9,10 +9,7 @@ import CityInfo from "./city-info";
 
 import CITIES from "../data/cities.json";
 
-import Countdown from "react-countdown-now";
-
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "react-tabs/style/react-tabs.css";
+import Countdown from "react-countdown-now";;
 
 const API = "https://api.myjson.com/bins/6fpy2";
 
@@ -91,23 +88,23 @@ class ClaimStake extends React.Component {
   render() {
     return (
       <div className="claim-stake">
-          <form className="stake-form">
-            <label for="eth-address">Ethereum Address</label>
-            <input
-              type="text"
-              id="eth-address"
-              name="Eth Address"
-              placeholder="Your ETH address.."
-            />
-            <label for="keybase-user">Keybase Username</label>
-            <input
-              type="text"
-              id="keybase-user"
-              name="keybase-user"
-              placeholder="Your Keybase user.."
-            />
-            <input type="submit" value="Submit" />
-          </form>
+        <form className="stake-form">
+          <label for="eth-address">Ethereum Address</label>
+          <input
+            type="text"
+            id="eth-address"
+            name="Eth Address"
+            placeholder="Your ETH address.."
+          />
+          <label for="keybase-user">Keybase Username</label>
+          <input
+            type="text"
+            id="keybase-user"
+            name="keybase-user"
+            placeholder="Your Keybase user.."
+          />
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     );
   }
@@ -118,10 +115,11 @@ class PhaseThree extends React.Component {
     return (
       <div className="phase-three-body" id="phase-three">
         <div className="phase-three-title">
-          {" "}
           Phase 3: Verify Owner of the Event
         </div>
-        <ClaimStake />
+        <div className="phase-three-tabs">
+          <ClaimStake />
+        </div>
       </div>
     );
   }
