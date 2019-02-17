@@ -16,9 +16,17 @@ const pinStyle = {
   stroke: 'none'
 };
 
+var numBigCities = 0
 
 function isBig(tweetCount) {
-  return tweetCount > 5
+  if (tweetCount > 5) {
+    numBigCities++
+    console.log(numBigCities)
+    return true
+  }
+  else {
+    return false
+  }
 }
 
 class GetTweetNumber extends React.Component {
