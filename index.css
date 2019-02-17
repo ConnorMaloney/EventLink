@@ -93,6 +93,12 @@ body {
 .stake-form {
   width: 50%;
   height: 25vh; 
+  margin-top: 5rem; 
+}
+
+.phase-three-title {
+  display: flex; 
+  justify-content: center; 
 }
 
 input[type=text], select {
@@ -103,6 +109,17 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #6600FF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .phase-three-body {
