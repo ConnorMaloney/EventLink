@@ -11,8 +11,13 @@ import CITIES from "../data/cities.json";
 
 import Countdown from "react-countdown-now";
 
-const API = "https://api.myjson.com/bins/6fpy2";
 
+console.log(CityPin.bigCities)
+
+//const API = "https://api.myjson.com/bins/6fpy2";
+//const API = 'https://24b895ea.ngrok.io/tweets'
+//const API = 'https://api.myjson.com/bins/1gblje'
+const API = 'http://acceeda9.ngrok.io/tweets'
 const TOKEN =
   "pk.eyJ1IjoiZm9vcGVydCIsImEiOiJjanM1bDlxbmgwMDUwNGFtZHFxZ3M2NGx1In0.N6t4n3TBDjXSGXeZ2QyosQ"; // Set your mapbox token here
 
@@ -42,7 +47,9 @@ class NavBar extends React.Component {
 }
 
 class PhaseTwo extends React.Component {
+  //state = { cityOne: null}
   render() {
+    //console.log(bigCities)
     return (
       <div className="phase-two-body" id="phase-two">
         <div className="phase-two-intro">
@@ -57,7 +64,7 @@ class PhaseTwo extends React.Component {
           </div>
         </div>
         <div className="phase-two-stake">
-          <div className="phase-two-top-city">City 1 and Address</div>
+          <div className="phase-two-top-city">City 1 and Address </div>
           <div className="phase-two-top-city">City 2 and Address</div>
         </div>
       </div>
@@ -185,7 +192,7 @@ export default class Map extends Component {
           anchor="top"
           longitude={popupInfo.longitude}
           latitude={popupInfo.latitude}
-          closeOnClick={false}
+          closeOnClick={true}
           onClose={() => this.setState({ popupInfo: null })}
         >
           <CityInfo info={popupInfo} />
@@ -193,6 +200,10 @@ export default class Map extends Component {
       )
     );
   }
+
+  _getCursor() {
+    return 'cursor'
+  };
 
   render() {
     const { viewport } = this.state;
@@ -206,20 +217,28 @@ export default class Map extends Component {
         onViewportChange={this._updateViewport}
         mapboxApiAccessToken={TOKEN}
         scrollZoom={false}
+        reuseMaps={false}
+        dragPan={false}
+        dragRotate={false}
+        touchZoom={false}
+        touchRoate={false}
+        preventStyleDiffing={true}
+        zoom={1.3}
+        latitude={15.7917}
+        longitude={7.0926}
+        getCursor={this._getCursor}
+
       >
         {CITIES.map(this._renderCityMarker)}
 
         {this._renderPopup()}
-
-        <div className="nav" style={navStyle}>
-          <NavigationControl onViewportChange={this._updateViewport} />
-        </div>
       </MapGL>
     );
   }
 }
 
 function App() {
+  console.log(CityPin.bigCities)
   return (
     <div className="entire-app">
       <NavBar />

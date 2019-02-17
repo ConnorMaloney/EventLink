@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 
-const API = 'https://api.myjson.com/bins/6fpy2'
-
+//const API = 'https://api.myjson.com/bins/6fpy2'
+//const API = 'https://24b895ea.ngrok.io/tweets'
+//const API = 'https://api.myjson.com/bins/1gblje'
+const API = 'http://acceeda9.ngrok.io/tweets'
 class CityEthAddress extends React.Component {
   state = { ethAddr: null}
 
@@ -70,10 +72,7 @@ export default class CityInfo extends PureComponent {
     return (
       <div>
         <div>
-          {displayName} | <a target="_new"
-          href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${displayName}`}>
-            Wikipedia
-          </a>
+          {displayName}
         </div>
         <img width={240} src={info.image} />
         <p><LatestCityTweet city={info.city}/></p>
