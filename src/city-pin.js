@@ -22,7 +22,6 @@ class TweetNumber extends React.Component {
 export default class CityPin extends PureComponent {
   render() {
     const { name } = this.props;
-
     return (
       <div>
         <h2 id="tweet-count-svg">
