@@ -48,9 +48,8 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .phase-one {
   position: static;
-  height: 85vh;
+  height: 90vh;
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 .count-down {
@@ -73,7 +72,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .phase-two-intro {
-  padding: 0.5rem;
+  padding: 3rem;
 }
 
 .phase-two-title {
