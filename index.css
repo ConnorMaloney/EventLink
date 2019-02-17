@@ -47,15 +47,20 @@ body {
 
 .phase-one {
   position: static;
-  margin-top: 5rem; 
+  margin-top: 6rem; 
   height: 90vh;
   width: 100%; 
   margin-bottom: 1rem;
 }
 
 .count-down {
-  z-index: 1;
   color: white;
+  display: flex; 
+  justify-content: center;
+  text-emphasis: bold;
+  color: red;
+  font-size: 40px;
+  align-content: center;
 }
 
 .phase-two-body {
