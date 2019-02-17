@@ -1,5 +1,15 @@
+import { initStaking } from "../services/staking.service";
+import React from "react";
 export class PhaseTwo extends React.Component {
-  componentDidMount() {}
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasInited: false
+    };
+  }
+  componentDidMount() {
+    initStaking("henrynguyen5").then();
+  }
   render() {
     return (
       <div className="phase-two-body" id="phase-two">
