@@ -11,13 +11,12 @@ import CITIES from "../data/cities.json";
 
 import Countdown from "react-countdown-now";
 
-
-console.log(CityPin.bigCities)
+console.log(CityPin.bigCities);
 
 //const API = "https://api.myjson.com/bins/6fpy2";
 //const API = 'https://24b895ea.ngrok.io/tweets'
 //const API = 'https://api.myjson.com/bins/1gblje'
-const API = 'http://acceeda9.ngrok.io/tweets'
+const API = "http://acceeda9.ngrok.io/tweets";
 const TOKEN =
   "pk.eyJ1IjoiZm9vcGVydCIsImEiOiJjanM1bDlxbmgwMDUwNGFtZHFxZ3M2NGx1In0.N6t4n3TBDjXSGXeZ2QyosQ"; // Set your mapbox token here
 
@@ -33,7 +32,9 @@ class NavBar extends React.Component {
     return (
       <div className="nav-container">
         <div className="nav-grid">
-          <div className="nav-bar-options">PHASE 1</div>
+          <div className="nav-bar-options">
+            <a href="#phase-one">PHASE 1</a>
+          </div>
           <div className="nav-bar-options">
             <a href="#phase-two">PHASE 2</a>
           </div>
@@ -202,8 +203,8 @@ export default class Map extends Component {
   }
 
   _getCursor() {
-    return 'cursor'
-  };
+    return "cursor";
+  }
 
   render() {
     const { viewport } = this.state;
@@ -227,7 +228,6 @@ export default class Map extends Component {
         latitude={15.7917}
         longitude={7.0926}
         getCursor={this._getCursor}
-
       >
         {CITIES.map(this._renderCityMarker)}
 
@@ -238,13 +238,13 @@ export default class Map extends Component {
 }
 
 function App() {
-  console.log(CityPin.bigCities)
+  console.log(CityPin.bigCities);
   return (
     <div className="entire-app">
       <NavBar />
-      <div className="phase-one">
-        <div className="count-down">
-          <Countdown date={Date.now() + 2.592e9} />
+      <div className="phase-one" >
+        <div className="count-down" id="phase-one">
+          Time Left To Vote &nbsp; {<Countdown date={Date.now() + 2.592e9} />}
         </div>
         <Map />
       </div>
@@ -258,8 +258,6 @@ export function renderToDom(container) {
   render(<App />, container);
 }
 
-//form for staking
-//phase 3
 // alarm clock countdown
 //display leaders and give eth address
 //make timer not reset
