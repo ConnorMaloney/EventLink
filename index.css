@@ -218,3 +218,7 @@ textarea {
   right: 1rem;
   opacity: 0.7;
 }
+
+.popup-city-name {
+  font-family: sans-serif;
+}

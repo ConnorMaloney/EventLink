@@ -71,8 +71,8 @@ export default class CityInfo extends PureComponent {
 
     return (
       <div>
-        <div>
-          {displayName}
+        <div className='popup-city-name'>
+          <p >{displayName}</p>
         </div>
         <img width={240} src={info.image} />
         <p><LatestCityTweet city={info.city}/></p>
