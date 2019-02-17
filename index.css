@@ -9,8 +9,8 @@ body {
   height: 100vh;
 }
 
-a:visited {
-  color: rgb(4, 156, 4);
+a {
+  color: rgb(4, 156, 4) !important;
 }
 
 .control-panel {
@@ -232,7 +232,7 @@ textarea {
   border-radius: 5rem;
   height: 3rem;
   width: 3rem;
-  background-color: #006699;
+  background-color: #2a42ad;
   position: relative;
   right: 1.5rem;
   bottom: 3rem;

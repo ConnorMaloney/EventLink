@@ -15,10 +15,10 @@ export class PhaseTwo extends React.Component {
   }
 
   componentDidMount() {
-    initStaking("henrynguyen5").then(contracts => {
+    /*initStaking("henrynguyen5").then(contracts => {
       this.props.setContracts(contracts);
       this.setState({ hasInited: true });
-    });
+    });*/
   }
 
   renderBody() {
