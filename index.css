@@ -89,6 +89,12 @@ a, a:hover, a:active, a:visited, a:focus {
   justify-content: space-around;
 }
 
+.phase-two-top-city {
+  height:25vh; 
+  width: 30%; 
+  border: 3px solid white;
+}
+
 .claim-stake {
   display: flex;
   justify-content: center;
@@ -97,7 +103,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .stake-form {
   width: 50%;
   height: 25vh;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .phase-three-title {

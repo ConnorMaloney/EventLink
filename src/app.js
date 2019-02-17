@@ -55,7 +55,6 @@ class PhaseTwo extends React.Component {
         </div>
         <div className="phase-two-stake">
           <div className="phase-two-top-city">City 1 and Address </div>
-          <div className="phase-two-top-city">City 2 and Address</div>
         </div>
       </div>
     );
