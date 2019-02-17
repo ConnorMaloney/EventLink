@@ -12,10 +12,10 @@ everyone to benefit and have a great time.
 
 ## Brought to you by:
 
-Connor Maloney
-Henry Nguyen
-Sharon Manrique
-Max Seesing
+* Connor Maloney
+* Henry Nguyen
+* Sharon Manrique
+* Max Seesing
 
 ### Setup
 
