@@ -1,24 +1,15 @@
 /* global window */
 import React, { Component } from "react";
 import { render } from "react-dom";
-import MapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
-
-import ControlPanel from "./control-panel";
+import MapGL, { Marker, Popup } from "react-map-gl";
 import CityPin from "./city-pin";
 import CityInfo from "./city-info";
-
 import CITIES from "../data/cities.json";
-
+import { TweetContext } from "./contexts/TweetContext";
 import Countdown from "react-countdown-now";
-
-console.log(CityPin.bigCities);
-
-//const API = "https://api.myjson.com/bins/6fpy2";
-//const API = 'https://24b895ea.ngrok.io/tweets'
-//const API = 'https://api.myjson.com/bins/1gblje'
-const API = "http://acceeda9.ngrok.io/tweets";
-const TOKEN =
-  "pk.eyJ1IjoiZm9vcGVydCIsImEiOiJjanM1bDlxbmgwMDUwNGFtZHFxZ3M2NGx1In0.N6t4n3TBDjXSGXeZ2QyosQ"; // Set your mapbox token here
+import { tweetRepo } from "./repositories/tweets.repo";
+import { appConfig } from "./app.config";
+import { getTweets } from "./services/tweets.service";
 
 const navStyle = {
   position: "absolute",
@@ -48,9 +39,7 @@ class NavBar extends React.Component {
 }
 
 class PhaseTwo extends React.Component {
-  //state = { cityOne: null}
   render() {
-    //console.log(bigCities)
     return (
       <div className="phase-two-body" id="phase-two">
         <div className="phase-two-intro">
@@ -78,14 +67,14 @@ class ClaimStake extends React.Component {
     return (
       <div className="claim-stake">
         <form className="stake-form">
-          <label for="eth-address">Ethereum Address</label>
+          <label htmlFor="eth-address">Ethereum Address</label>
           <input
             type="text"
             id="eth-address"
             name="Eth Address"
             placeholder="Your ETH address.."
           />
-          <label for="keybase-user">Keybase Username</label>
+          <label htmlFor="keybase-user">Keybase Username</label>
           <input
             type="text"
             id="keybase-user"
@@ -107,11 +96,7 @@ class SignKeybaseMessage extends React.Component {
           <div className="sign-message-render">
             Sign this message via Keybase.io
           </div>
-          <button
-            id="keybase-message-render"
-            value="myvalue"
-            onclick="myFunction()"
-          >
+          <button id="keybase-message-render" value="myvalue">
             Render Your Message
           </button>
         </div>
@@ -125,7 +110,7 @@ class VerifySignedMessage extends React.Component {
     return (
       <div className="verify-signed-message">
         <form className="verify-message-container">
-          <textarea>Paste in your signed message from Keybase.io...</textarea>
+          <textarea defaultValue="Paste in your signed message from Keybase.io..." />
           <input type="submit" value="Submit" />
         </form>
       </div>
@@ -159,27 +144,37 @@ export default class Map extends Component {
         bearing: 0,
         pitch: 0
       },
-      popupInfo: null
+      popupInfo: null,
+      tweets: {}
     };
   }
 
+  componentDidMount() {
+    this._pollForTweets();
+  }
+
+  _pollForTweets() {
+    getTweets()
+      .then(t => this.setState({ tweets: t }))
+      .then(() => setTimeout(() => this._pollForTweets(), 250));
+  }
   _updateViewport = viewport => {
     this.setState({ viewport });
   };
 
   _renderCityMarker = (city, index) => {
     return (
-      <Marker
-        key={`marker-${index}`}
-        longitude={city.longitude}
-        latitude={city.latitude}
-      >
-        <CityPin
-          name={city.city}
-          size={20}
-          onClick={() => this.setState({ popupInfo: city })}
-        />
-      </Marker>
+      <TweetContext.Provider value={this.state.tweets} key={`marker-${index}`}>
+        <div
+          onClick={() =>
+            this.setState({ popupInfo: this.state.popupInfo ? null : city })
+          }
+        >
+          <Marker longitude={city.longitude} latitude={city.latitude}>
+            <CityPin name={city.city} size={20} />
+          </Marker>
+        </div>
+      </TweetContext.Provider>
     );
   };
 
@@ -196,7 +191,9 @@ export default class Map extends Component {
           closeOnClick={true}
           onClose={() => this.setState({ popupInfo: null })}
         >
-          <CityInfo info={popupInfo} />
+          <TweetContext.Provider value={this.state.tweets}>
+            <CityInfo info={popupInfo} />
+          </TweetContext.Provider>
         </Popup>
       )
     );
@@ -216,7 +213,7 @@ export default class Map extends Component {
         height="100%"
         mapStyle="mapbox://styles/mapbox/dark-v9"
         onViewportChange={this._updateViewport}
-        mapboxApiAccessToken={TOKEN}
+        mapboxApiAccessToken={appConfig.mapBoxToken}
         scrollZoom={false}
         reuseMaps={false}
         dragPan={false}
@@ -230,7 +227,6 @@ export default class Map extends Component {
         getCursor={this._getCursor}
       >
         {CITIES.map(this._renderCityMarker)}
-
         {this._renderPopup()}
       </MapGL>
     );
@@ -238,14 +234,14 @@ export default class Map extends Component {
 }
 
 function App() {
-  console.log(CityPin.bigCities);
   return (
     <div className="entire-app">
       <NavBar />
-      <div className="phase-one" >
+      <div className="phase-one">
         <div className="count-down" id="phase-one">
           Time Left To Vote &nbsp; {<Countdown date={Date.now() + 2.592e9} />}
         </div>
+
         <Map />
       </div>
       <PhaseTwo />

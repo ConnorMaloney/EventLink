@@ -4,6 +4,7 @@
     "start-local": "webpack-dev-server --env.local --progress --hot --open"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "dotenv-webpack": "^1.7.0",
     "react": "^16.3.0",
