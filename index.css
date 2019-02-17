@@ -32,13 +32,11 @@ body {
   align-content: center;
   position: fixed;
   top: 0;
-
 }
 
 .nav-grid {
   display: flex;
   align-items: center;
-
 }
 
 .nav-bar-options {
@@ -47,15 +45,15 @@ body {
 
 .phase-one {
   position: static;
-  margin-top: 6rem; 
+  margin-top: 6rem;
   height: 90vh;
-  width: 100%; 
+  width: 100%;
   margin-bottom: 1rem;
 }
 
 .count-down {
   color: white;
-  display: flex; 
+  display: flex;
   justify-content: center;
   text-emphasis: bold;
   color: red;
@@ -65,48 +63,49 @@ body {
 
 .phase-two-body {
   height: 100vh;
-  width: 100%; 
-  background-color: #DCDCDC; 
-  justify-content: center;  
+  width: 100%;
+  background-color: #dcdcdc;
+  justify-content: center;
   padding-top: 10rem;
-  text-align: center; 
+  text-align: center;
 }
 
-.phase-two-intro { 
+.phase-two-intro {
   padding: 0.5rem;
 }
 
 .phase-two-title {
-  font-size: 24px; 
-  padding: 0.5rem; 
+  font-size: 24px;
+  padding: 0.5rem;
 }
 
 .phase-two-blurp {
   padding: 3rem;
 }
 .phase-two-stake {
-  padding: 3rem; 
-  display: flex; 
-  justify-content: space-around; 
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .claim-stake {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
 
 .stake-form {
   width: 50%;
-  height: 25vh; 
-  margin-top: 5rem; 
+  height: 25vh;
+  margin-top: 5rem;
 }
 
 .phase-three-title {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
 
-input[type=text], select {
+input[type="text"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -116,9 +115,9 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
-  background-color: #6600FF;
+  background-color: #6600ff;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -128,38 +127,38 @@ input[type=submit] {
 }
 
 .phase-three-body {
-  height: 100vh; 
-  width: 100%; 
-  background-color: #C8C8C8;
-  padding-top: 10rem; 
-  justify-content: center; 
+  height: 100vh;
+  width: 100%;
+  background-color: #c8c8c8;
+  padding-top: 10rem;
+  justify-content: center;
 }
 
 .phase-three-title {
-  font-size: 24px; 
-  padding: 0.5rem; 
+  font-size: 24px;
+  padding: 0.5rem;
 }
 
 .sign-keybase {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .sign-message-container {
   width: 50%;
-  height: 25vh; 
-  margin-top: 5rem; 
+  height: 25vh;
+  margin-top: 5rem;
 }
 
 .sign-message-render {
   width: 100%;
-  height: 10rem; 
+  height: 10rem;
   background-color: white;
 }
 
 button {
   width: 100%;
-  background-color: #6600FF;
+  background-color: #6600ff;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -169,13 +168,13 @@ button {
 }
 
 .verify-signed-message {
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
 
 .verify-message-container {
   width: 50%;
-  height: 25vh; 
+  height: 25vh;
   margin-top: 5rem;
 }
 
@@ -191,7 +190,7 @@ textarea {
 }
 
 #tweet-count-svg {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: whitesmoke;
   text-align: center;
   font-size: 0.9rem;
@@ -199,20 +198,18 @@ textarea {
 
 .stakeable-city {
   border-radius: 5rem;
-  height: 5rem;
-  width: 5rem;
-  background-color: red;
+  height: 3rem;
+  width: 3rem;
+  background-color: aqua;
   position: relative;
-  bottom: 2rem;
   right: 1rem;
 }
-
 
 .unstakeable-city {
   border-radius: 5rem;
   height: 2.25rem;
   width: 2.25rem;
-  background-color: #0892D0;
+  background-color: #0892d0;
   position: relative;
   bottom: 2.25rem;
   right: 1rem;
