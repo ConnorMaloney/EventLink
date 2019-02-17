@@ -1,10 +1,15 @@
 body {
   margin: 0;
   background: #dcdcdc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #map {
   width: 100vw;
   height: 100vh;
+}
+
+a:visited {
+  color: rgb(4, 156, 4);
 }
 
 .control-panel {
@@ -27,7 +32,7 @@ body {
   height: 10vh;
   width: 100%;
   display: flex;
-  background-color: grey;
+  background-color: rgb(24, 26, 26);
   justify-content: space-evenly;
   align-content: center;
 }
@@ -67,6 +72,7 @@ a, a:hover, a:active, a:visited, a:focus {
   background-color: #dcdcdc;
   justify-content: center;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .phase-two-intro {
