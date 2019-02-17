@@ -1,10 +1,16 @@
 body {
   margin: 0;
-  background: #dcdcdc;
+  background: rgb(24, 26, 26);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }
 #map {
   width: 100vw;
   height: 100vh;
+}
+
+a:visited {
+  color: rgb(4, 156, 4);
 }
 
 .control-panel {
@@ -27,7 +33,7 @@ body {
   height: 10vh;
   width: 100%;
   display: flex;
-  background-color: grey;
+  background-color: rgb(24, 26, 26);
   justify-content: space-evenly;
   align-content: center;
 }
@@ -64,9 +70,10 @@ a, a:hover, a:active, a:visited, a:focus {
 .phase-two-body {
   height: 100vh;
   width: 100%; 
-  background-color: #dcdcdc;
+  background-color: rgb(53, 47, 47);
   justify-content: center;
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .phase-two-intro {
@@ -76,10 +83,12 @@ a, a:hover, a:active, a:visited, a:focus {
 .phase-two-title {
   font-size: 24px;
   padding: 0.5rem;
+  color: whitesmoke;
 }
 
 .phase-two-blurp {
   padding: 3rem;
+  color: whitesmoke;
 }
 .phase-two-stake {
   padding: 3rem;
@@ -91,6 +100,8 @@ a, a:hover, a:active, a:visited, a:focus {
   height:25vh; 
   width: 30%; 
   border: 3px solid white;
+  border-radius: 5px;
+  color: whitesmoke;
 }
 
 .claim-stake {
@@ -107,6 +118,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .phase-three-title {
   display: flex;
   justify-content: center;
+  color: whitesmoke;
 }
 
 input[type="text"],
@@ -134,8 +146,9 @@ input[type="submit"] {
 .phase-three-body {
   height: 100vh;
   width: 100%;
-  background-color: #c8c8c8;
+  background: rgb(24, 26, 26);
   justify-content: center;
+  color: whitesmoke;
 }
 
 .phase-three-title {
@@ -156,8 +169,15 @@ input[type="submit"] {
 
 .sign-message-render {
   width: 100%;
-  height: 10rem;
+  height: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
   background-color: white;
+  color: black;
 }
 
 button {
@@ -198,12 +218,14 @@ textarea {
   color: whitesmoke;
   text-align: center;
   font-size: 0.9rem;
+  opacity: 0.7;
   text-shadow:
   3px 3px 0 #000,
   -1px -1px 0 #000,  
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
+  position: relative;
 }
 
 .stakeable-city {
@@ -212,7 +234,8 @@ textarea {
   width: 3rem;
   background-color: #006699;
   position: relative;
-  right: 1rem;
+  right: 1.5rem;
+  bottom: 3rem;
 }
 
 .unstakeable-city {
