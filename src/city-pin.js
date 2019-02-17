@@ -39,17 +39,7 @@ class GetTweetNumber extends React.Component {
           allTweets: responseData.result[this.props.city.toLowerCase()].length
         })
         return allTweets
-      })
-    /*  
-    .then(
-      (tweetCount) => {
-        if (tweetCount > 100) {
-          this.setState({
-            stakeableCity: "stake"
-          })
-        }
-      }
-    )*/; 
+      }); 
 
   }
 
