@@ -23,25 +23,6 @@ const navStyle = {
   padding: "10px"
 };
 
-class TopCities extends React.Component {
-  state = { ethAddr: null };
-
-  componentDidMount() {
-    fetch(API)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(responseData => {
-        this.setState({
-          ethAddr: responseData.result[this.props.city.toLowerCase()].length
-        });
-      });
-  }
-  render() {
-    return <h1>{this.state.ethAddr}</h1>;
-  }
-}
-
 class NavBar extends React.Component {
   render() {
     return (

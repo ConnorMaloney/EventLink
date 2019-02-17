@@ -16,12 +16,12 @@ const pinStyle = {
   stroke: 'none'
 };
 
-var bigCities = {}
+export var bigCities = {}
 
 function isBig(tweetCount, cityName) {
   if (tweetCount > 5) {
     bigCities[cityName] = tweetCount
-    console.log(bigCities)
+    //console.log(bigCities)
     return true
   }
   else {
