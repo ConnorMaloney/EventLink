@@ -98,6 +98,40 @@ class ClaimStake extends React.Component {
   }
 }
 
+class SignKeybaseMessage extends React.Component {
+  render() {
+    return (
+      <div className="sign-keybase">
+        <div className="sign-message-container">
+          <div className="sign-message-render">
+            Sign this message via Keybase.io
+          </div>
+          <button
+            id="keybase-message-render"
+            value="myvalue"
+            onclick="myFunction()"
+          >
+            Render Your Message
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+
+class VerifySignedMessage extends React.Component {
+  render() {
+    return (
+      <div className="verify-signed-message">
+        <form className="verify-message-container">
+          <textarea>Paste in your signed message from Keybase.io...</textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    );
+  }
+}
+
 class PhaseThree extends React.Component {
   render() {
     return (
@@ -105,9 +139,9 @@ class PhaseThree extends React.Component {
         <div className="phase-three-title">
           Phase 3: Verify Owner of the Event
         </div>
-        <div className="phase-three-tabs">
-          <ClaimStake />
-        </div>
+        <ClaimStake />
+        <SignKeybaseMessage />
+        <VerifySignedMessage />
       </div>
     );
   }
