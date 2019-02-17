@@ -1,7 +1,7 @@
 [
-    {"city":"Denver","population":"704,621","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/240px-DenverCP.JPG","state":"Colorado","latitude":39.742043,"longitude":-104.991531},
-    {"city":"Singapore","population":"5,638,700","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/1_Singapore_city_skyline_2010_day_panorama.jpg/420px-1_Singapore_city_skyline_2010_day_panorama.jpg","state":"Southeast Asia","latitude":1.29027,"longitude":103.851959},
-    {"city":"Melbourne","population":"5,008,124","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/240px-DenverCP.JPG","state":"Victoria","latitude":-37.66371,"longitude":144.844788},
-    {"city":"Paris","population":"2,158,402","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/240px-DenverCP.JPG","state":"France","latitude":48.864716,"longitude":2.349014},
-    {"city":"Toronto","population":"600,158","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/240px-DenverCP.JPG","state":"Ontario","latitude":43.653908,"longitude":-79.384293}
+    {"city":"Denver","image":"https://www.langan.com/wp-content/uploads/2017/08/Denver.jpg","state":"Colorado","latitude":39.742043,"longitude":-104.991531},
+    {"city":"Singapore","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/1_Singapore_city_skyline_2010_day_panorama.jpg/420px-1_Singapore_city_skyline_2010_day_panorama.jpg","state":"Southeast Asia","latitude":1.29027,"longitude":103.851959},
+    {"city":"Melbourne","image":"https://www.visitmelbourne.com/-/media/images/melbourne/destinations/melbourne-park_mel_r_supplied-082_1150x863.jpg?h=600&iar=1&mh=600&mw=800&w=800&ts=20170206470129&hash=130DD71D109FF4701085F90BA3CE0771","state":"Victoria","latitude":-37.66371,"longitude":144.844788},
+    {"city":"Paris","image":"https://media.cntraveler.com/photos/58de89946c3567139f9b6cca/4:3/w_480,c_limit/GettyImages-468366251.jpg","state":"France","latitude":48.864716,"longitude":2.349014},
+    {"city":"Toronto","image":"https://www.cambridgesuitestoronto.com/resourcefiles/attractionsmallimages/cn-tower-toronto-ontario-th.jpg","state":"Ontario","latitude":43.653908,"longitude":-79.384293}
 ]
