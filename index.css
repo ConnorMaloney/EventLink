@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: rgb(24, 26, 26);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: whitesmoke;
+  color: black;
 }
 #map {
   width: 100vw;
@@ -83,10 +83,12 @@ a, a:hover, a:active, a:visited, a:focus {
 .phase-two-title {
   font-size: 24px;
   padding: 0.5rem;
+  color: whitesmoke;
 }
 
 .phase-two-blurp {
   padding: 3rem;
+  color: whitesmoke;
 }
 .phase-two-stake {
   padding: 3rem;
@@ -98,6 +100,8 @@ a, a:hover, a:active, a:visited, a:focus {
   height:25vh; 
   width: 30%; 
   border: 3px solid white;
+  border-radius: 5px;
+  color: whitesmoke;
 }
 
 .claim-stake {
@@ -114,6 +118,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .phase-three-title {
   display: flex;
   justify-content: center;
+  color: whitesmoke;
 }
 
 input[type="text"],
@@ -143,6 +148,7 @@ input[type="submit"] {
   width: 100%;
   background: rgb(24, 26, 26);
   justify-content: center;
+  color: whitesmoke;
 }
 
 .phase-three-title {
