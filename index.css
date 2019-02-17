@@ -212,12 +212,14 @@ textarea {
   color: whitesmoke;
   text-align: center;
   font-size: 0.9rem;
+  opacity: 0.7;
   text-shadow:
   3px 3px 0 #000,
   -1px -1px 0 #000,  
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
+  position: relative;
 }
 
 .stakeable-city {
@@ -226,7 +228,8 @@ textarea {
   width: 3rem;
   background-color: #006699;
   position: relative;
-  right: 1rem;
+  right: 1.5rem;
+  bottom: 3rem;
 }
 
 .unstakeable-city {
