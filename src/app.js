@@ -233,7 +233,7 @@ function App() {
   return (
     <div className="entire-app">
       <NavBar />
-      <div className="phase-one">
+      <div className="phase-one" id="phase-one">
         {/* <div className="count-down" id="phase-one">
           Time Left To Vote &nbsp; {<Countdown date={Date.now() + 2.592e9} />}
         </div> */}

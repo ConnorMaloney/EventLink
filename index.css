@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #000;
+  background: #dcdcdc;
 }
 #map {
   width: 100vw;
@@ -48,13 +48,12 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .phase-one {
   position: static;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 }
 
 .count-down {
   color: white;
-  display: flex;
   justify-content: center;
   text-emphasis: bold;
   color: red;
@@ -64,11 +63,10 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .phase-two-body {
   height: 100vh;
-  width: 100%;
+  width: 100%; 
   background-color: #dcdcdc;
   justify-content: center;
   text-align: center;
-  margin-top: 5rem;
 }
 
 .phase-two-intro {
