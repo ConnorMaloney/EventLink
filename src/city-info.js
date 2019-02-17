@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 
-const API = 'https://api.myjson.com/bins/6fpy2'
-
+//const API = 'https://api.myjson.com/bins/6fpy2'
+//const API = 'https://24b895ea.ngrok.io/tweets'
+//const API = 'https://api.myjson.com/bins/1gblje'
+const API = 'http://acceeda9.ngrok.io/tweets'
 class CityEthAddress extends React.Component {
   state = { ethAddr: null}
 

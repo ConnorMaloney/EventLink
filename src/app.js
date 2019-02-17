@@ -9,10 +9,15 @@ import CityInfo from "./city-info";
 
 import CITIES from "../data/cities.json";
 
-import Countdown from "react-countdown-now";;
+import Countdown from "react-countdown-now";
 
-const API = "https://api.myjson.com/bins/6fpy2";
 
+console.log(CityPin.bigCities)
+
+//const API = "https://api.myjson.com/bins/6fpy2";
+//const API = 'https://24b895ea.ngrok.io/tweets'
+//const API = 'https://api.myjson.com/bins/1gblje'
+const API = 'http://acceeda9.ngrok.io/tweets'
 const TOKEN =
   "pk.eyJ1IjoiZm9vcGVydCIsImEiOiJjanM1bDlxbmgwMDUwNGFtZHFxZ3M2NGx1In0.N6t4n3TBDjXSGXeZ2QyosQ"; // Set your mapbox token here
 
@@ -42,7 +47,9 @@ class NavBar extends React.Component {
 }
 
 class PhaseTwo extends React.Component {
+  //state = { cityOne: null}
   render() {
+    //console.log(bigCities)
     return (
       <div className="phase-two-body" id="phase-two">
         <div className="phase-two-intro">
@@ -57,7 +64,7 @@ class PhaseTwo extends React.Component {
           </div>
         </div>
         <div className="phase-two-stake">
-          <div className="phase-two-top-city">City 1 and Address</div>
+          <div className="phase-two-top-city">City 1 and Address </div>
           <div className="phase-two-top-city">City 2 and Address</div>
         </div>
       </div>
@@ -186,6 +193,7 @@ export default class Map extends Component {
 }
 
 function App() {
+  console.log(CityPin.bigCities)
   return (
     <div className="entire-app">
       <NavBar />
