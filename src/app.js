@@ -96,9 +96,6 @@ class SignKeybaseMessage extends React.Component {
           <div className="sign-message-render">
             Sign this message via Keybase.io
           </div>
-          <button id="keybase-message-render" value="myvalue">
-            Render Your Message
-          </button>
         </div>
       </div>
     );
@@ -238,9 +235,9 @@ function App() {
     <div className="entire-app">
       <NavBar />
       <div className="phase-one">
-        <div className="count-down" id="phase-one">
+        {/* <div className="count-down" id="phase-one">
           Time Left To Vote &nbsp; {<Countdown date={Date.now() + 2.592e9} />}
-        </div>
+        </div> */}
 
         <Map />
       </div>
