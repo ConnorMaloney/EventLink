@@ -200,6 +200,13 @@ textarea {
   color: whitesmoke;
   text-align: center;
   font-size: 0.9rem;
+  text-shadow:
+  3px 3px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+
 
 }
 
@@ -207,7 +214,7 @@ textarea {
   border-radius: 5rem;
   height: 3rem;
   width: 3rem;
-  background-color: aqua;
+  background-color: #006699;
   position: relative;
   right: 1rem;
 }
