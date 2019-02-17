@@ -30,9 +30,12 @@ body {
   background-color: grey;
   justify-content: space-evenly;
   align-content: center;
-  position: fixed;
-  top: 0;
 }
+
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;
+}
+
 
 .nav-grid {
   display: flex;
@@ -45,8 +48,7 @@ body {
 
 .phase-one {
   position: static;
-  margin-top: 6rem;
-  height: 90vh;
+  height: 85vh;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -66,8 +68,8 @@ body {
   width: 100%;
   background-color: #dcdcdc;
   justify-content: center;
-  padding-top: 10rem;
   text-align: center;
+  margin-top: 5rem;
 }
 
 .phase-two-intro {
@@ -130,7 +132,6 @@ input[type="submit"] {
   height: 100vh;
   width: 100%;
   background-color: #c8c8c8;
-  padding-top: 10rem;
   justify-content: center;
 }
 
@@ -194,6 +195,7 @@ textarea {
   color: whitesmoke;
   text-align: center;
   font-size: 0.9rem;
+
 }
 
 .stakeable-city {
