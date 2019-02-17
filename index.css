@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  background: #dcdcdc;
+  background: rgb(24, 26, 26);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
 }
 #map {
   width: 100vw;
@@ -69,7 +70,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .phase-two-body {
   height: 100vh;
   width: 100%; 
-  background-color: #dcdcdc;
+  background-color: rgb(53, 47, 47);
   justify-content: center;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -140,7 +141,7 @@ input[type="submit"] {
 .phase-three-body {
   height: 100vh;
   width: 100%;
-  background-color: #c8c8c8;
+  background: rgb(24, 26, 26);
   justify-content: center;
 }
 
