@@ -201,6 +201,10 @@ export default class Map extends Component {
     );
   }
 
+  _getCursor() {
+    return 'cursor'
+  };
+
   render() {
     const { viewport } = this.state;
 
@@ -222,6 +226,7 @@ export default class Map extends Component {
         zoom={1.3}
         latitude={15.7917}
         longitude={7.0926}
+        getCursor={this._getCursor}
 
       >
         {CITIES.map(this._renderCityMarker)}
