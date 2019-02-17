@@ -1,5 +1,9 @@
 import { axios } from "./axios.service";
-export { stakeToHyperstakeContract } from "./web3.service";
+export {
+  stakeToHyperstakeContract,
+  claimStake,
+  getBalanceOfContract
+} from "./web3.service";
 
 export function getChallenge(username) {
   return axios
